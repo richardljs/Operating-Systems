@@ -1,2 +1,2 @@
 # Operating-Systems
-CS 537 offered at the University of Wisconsin-Madison
+Operating Systems class offered at the University of Wisconsin-Madison
