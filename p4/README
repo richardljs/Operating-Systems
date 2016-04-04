@@ -1,0 +1,33 @@
+Authors: Richard Lee, Parker Madison
+
+Linux:
+For this part of the project, everything was changed through the server.c file.
+4 functions besides the main was created in order to build the producer-consumer relationship for the web server. 
+These 4 functions were mostly taken/implemented as it was from the textbook with a slight tweak to it. 
+Other than that, the work that was needed to be done was to :
+      accept new arguments for the thread and buffer size, 
+      initializing locks and conditional variables, 
+      and knowing where to place the thread create and thread join
+
+
+xv6: 
+- Clone { 
+  Basically copied the fork() code. 
+  Took out everything that was unecessary.
+  Changed parts like the page directory allocation that wouldn't work with threads.
+  Added the stack setup
+}
+
+- Join {
+  Copied the wait() code.
+  Again, took out everything unecessary and changed parts that wouldn't work.
+  Had to differentiate between what would look like a child process and a thread when looking for Zombies
+  Once found, some things needed to be removed and some didn't from the wait code - took a few lines out
+}
+
+- Library {
+  Thread_create/join:
+    These were as simple as bounds checking, error checking, and then properly calling the system calls
+  Locks:
+    This code was practically word for word already in the xv6 code. Mostly just copy/paste
+}

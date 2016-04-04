@@ -1,0 +1,13 @@
+Author: Richard Lee
+
+#Assignment 5: File System Integrity
+
+Purpose: Changing the existing xv6 file system to add protection from data corruption. 
+
+3 Tasks:
+
+- modify the code to allow the user to create a new type of file that keeps a checksum for every block it points to. Checksums are used by modern storage systems in order to detect silent corruption.
+
+- change the file system to handle reads and writes differently for files with checksums. Specifically, when writing out such a file, create a checksum for every block of the file; when reading such a file, check and make sure the block still matches the stored checksum, returning an error code (-1) if it doesn't.
+
+- modify the stat() system call to dump some information about the file.

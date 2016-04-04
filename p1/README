@@ -1,0 +1,19 @@
+Authors: Richard Lee
+
+Linux:
+Sorting within a range
+
+rangesort.c
+
+Takes in one of these generated files and sorts it based on the 4-byte key (the remainder of the record should of course be kept with the same key). Keys which fall outside of lowvalue and highvalue should be discarded (and not written to the output file). The output is written to the specified output file.
+
+xv6: 
+Kernel Intro
+
+Adding 2 system calls to the xv6 system:
+
+-getsyscallnumtotal()
+	returns the total number of system calls that have been issued.
+
+-getsyscallnumsuccess()
+	returns the number of system calls that have completed successfully (i.e., did not have a return value of -1).
